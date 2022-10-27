@@ -2120,7 +2120,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         """
         secret = current_app.config["GUEST_TOKEN_JWT_SECRET"]
         algo = current_app.config["GUEST_TOKEN_JWT_ALGO"]
-        audience = self._get_guest_token_jwt_audience()
+        audience = current_app.config["GUEST_TOKEN_JWT_ALGO"]
         return self.pyjwt_for_guest_token.decode(
             raw_token, secret, algorithms=[algo], audience=audience
         )
