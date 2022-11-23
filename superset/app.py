@@ -21,12 +21,23 @@ import os
 from flask import Flask
 
 from superset.initialization import SupersetAppInitializer
+from flask_jwt import JWT, jwt_required, current_identity
 
 logger = logging.getLogger(__name__)
 
 
+def authenticate(username, password):
+    user = username_table.get(username, None)
+    if user and safe_str_cmp(user.password.encode('utf-8'), password.encode('utf-8')):
+        return user
+
+def identity(payload):
+    user_id = payload['identity']
+    return userid_table.get(user_id, None)
+
 def create_app() -> Flask:
     app = SupersetApp(__name__)
+    jwt = JWT(app, authenticate, identity)
 
     try:
         # Allow user to override our config completely
