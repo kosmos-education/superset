@@ -19225,3 +19225,11 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:29
 msgid "24 hours"
 msgstr ""
+
+#: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx
+msgid "Export to PDF"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx
+msgid "Download as Image"
+msgstr ""

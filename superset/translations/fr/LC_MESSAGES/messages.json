@@ -4634,7 +4634,9 @@
       "10 seconds": ["10 secondes"],
       "6 hours": ["6 heures"],
       "12 hours": ["12 heures"],
-      "24 hours": ["24 heures"]
+      "24 hours": ["24 heures"],
+      "Export to PDF": ["Exporter en PDF"],
+      "Download as Image": ["Télécharger comme image"]
     }
   }
 }
